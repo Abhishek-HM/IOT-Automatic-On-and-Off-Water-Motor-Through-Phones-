@@ -1,0 +1,23 @@
+#define BLYNK_TEMPLATE_ID "TMPLHDQRNHln"
+#define BLYNK_DEVICE_NAME "control water pump"
+#define BLYNK_AUTH_TOKEN "VwGVB5Kn2_3zcvmcLTN7E0S1gn6oj8Nz"
+
+#define BLYNK_PRINT Serial    // Comment this out to disable prints and save space
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+char auth[] = "VwGVB5Kn2_3zcvmcLTN7E0S1gn6oj8Nz";
+char ssid[] = "Abhi";
+char pass[] = "9019558553";
+ 
+void setup()
+{
+  Serial.begin(9600);
+  Blynk.begin(auth,ssid,pass);
+   
+}
+
+void loop()
+{
+  Blynk.run();
+}
